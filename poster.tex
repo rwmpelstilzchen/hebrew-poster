@@ -1,0 +1,61 @@
+\documentclass[a3paper]{article}
+\usepackage[portrait, top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+
+\usepackage{xcolor}
+
+\usepackage{fontspec}
+\usepackage[RTLdocument]{bidi}
+\setmainfont[Script=Hebrew, Language=Hebrew]{SBL Hebrew}
+
+\setlength\parskip{\smallskipamount}
+\setlength\parindent{0pt}
+
+\usepackage{setspace}
+%\usepackage{color}
+
+
+\newcommand{\latealphabet}{אבגדהוזחטיכךלמ\\םנןסעפףצץקרשת}
+\newcommand{\earlyalphabet}{אבגדהוזחטיכלמ\\נסעפצקרשת}
+\newcommand{\showalphabet}{\latealphabet}
+% #1: font name in OS
+% #2: font name
+% #3: designer
+% #4: year
+% #5: size A (meta-data)
+% #6: size B (alphabet)
+% #7: size C (alef)
+\newcommand{\fontsample}[7]{\fontspec[Script=Hebrew]{#1}\begin{minipage}{5cm}\begin{center}\resizebox{1.0cm}{!}{\textcolor{gray}{א}}\\\fontsize{20}{20}\selectfont #2\\\fontsize{10}{10}\selectfont\textcolor{gray}{#3 (#4)}\end{center}\end{minipage} \resizebox{20cm}{!}{\fontsize{#5}{#5}\selectfont  \fontsize{#6}{#6}\selectfont\showalphabet}\\[0.75cm]}
+
+\begin{document}
+
+\begin{center}
+	\fontsize{60}{60}\fontspec[Script=Hebrew]{Rutz_OE Bold Pro}\textcolor{gray}{דֻּגְמָאוֹת נִבְחָרוֹת לְאוֹתִיּוֹת עִבְרִיּוֹת }
+\end{center}
+
+\vspace{1cm}
+
+\renewcommand{\showalphabet}{\earlyalphabet}
+\fontsample{Proto Canaanite}{קדם כנעני}{}{\LR{1500-}}{30}{50}{90}
+\fontsample{Hebrew Paleo Mesha}{מצבת מישע}{}{\LR{-9c.}}{30}{50}{90}
+\renewcommand{\showalphabet}{\latealphabet}
+\fontsample{Guttman Rashi}{כתב רש״י}{***}{}{}{}{}
+\fontsample{Koby}{כתב יד}{}{המאה הי"ג ואילך}{}{}{}
+\fontsample{Keter Aram Tsova}{כֶּתֶר אֲרָם־צוֹבָא}{}{המאה הי׳}{30}{50}{90}
+\fontsample{Hebrew SoferStam Ashkenaz}{סת"ם אשכנז}{}{}{30}{50}{90}
+\fontsample{Guttman Vilna}{וִילְנָא}{דְּפוּס ראָם}{המאה הי״ח}{30}{50}{90}
+\fontsample{Frank Ruehl CLM}{פְרַנְק־רִיהל}{רְפָאֵל פְרַנְק, אוֹטוֹ רִיהל}{1910}{30}{50}{90}
+\fontsample{Guttman Haim}{חַיִּים}{פֶּסַח עִיר־שַׁי}{1925*}{30}{50}{90}
+\fontsample{David CLM}{דָּוִד}{אִיתָמָר דָּוִד}{1952}{30}{50}{90}
+\fontsample{Guttman Hatzvi}{הַצְּבִי}{צְבִי הָוּזְמַן*}{1954}{30}{50}{90}
+\fontsample{Guttman Hodes}{הֲדַסָּה}{הֵנְרִי* פְרִידְלַנְדֶר*}{1958}{30}{50}{90}
+%\fontsample{Narkisim}{נַרְקִיסִים}{צְבִי נַרְקִיס}{***}{30}{50}{90}
+\fontsample{Narkisim}{נרקיסים}{צבי נרקיס}{***}{30}{50}{90}
+\fontsample{Guttman Keren}{קוֹרֵן}{אֵלִיָּהוּ קוֹרֵן}{1962/81}{}{}{}
+\fontsample{SBL Hebrew}{סב״ל עִבְרִי}{ג׳וֹן הָדְסוֹן*}{2003}{30}{50}{90}
+\fontsample{Fixedsys Excelsior 3.01-L2}{פיקסדסיס אקסלסיור}{דריין* ולנטין*}{2007}{30}{50}{90}
+%\fontsample{PragmataPro}{פְּרַגְמָטָה־פְּרוֹ*}{פַבְּרִיצְיוֹ* סְכִּיאָבִי*}{2010}{30}{50}{90}
+\fontsample{PragmataPro}{פרגמטה}{פבריציו סכיאבי}{2010}{30}{50}{90}
+\fontsample{Rutz_OE Regular Pro}{רָץ}{עוֹדֵד עֵזֶר}{***}{30}{50}{90}
+\fontsample{Alef}{אָלֵף}{מִיכַל סַהַר, דָּנִי מֵירַב, מוּשוֹן זֵר־אָבִיב, נִיר יֵינִי}{2012}{30}{50}{90}
+
+\end{document}
